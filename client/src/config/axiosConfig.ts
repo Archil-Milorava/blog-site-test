@@ -8,8 +8,6 @@ const options = {
   withCredentials: true,
 };
 
-console.log(import.meta.env.VITE_BASE_URL);
-
 const API = axios.create(options);
 
 API.interceptors.response.use(
