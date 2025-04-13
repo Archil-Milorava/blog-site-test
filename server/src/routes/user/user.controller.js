@@ -61,7 +61,7 @@ export const signIn = async (req, res, next) => {
     const user = await prisma.user.findUnique({ where: { nickName } });
 
     if (!user) {
-      throw appError("Wrong Credentials", BAD_REQUEST);
+      throw new appError("Wrong Credentials", BAD_REQUEST);
     }
 
     const isPasswordValid = await comparePassword(password, user.password);
