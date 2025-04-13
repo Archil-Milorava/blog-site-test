@@ -7,14 +7,16 @@
   "scripts": {
     "watch": "nodemon src/server.js",
     "start": "node src/server.js",
-    "build": "npm install"
+    "build": "npm install && npx prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^6.5.0",
+    "backend-slq": "file:",
     "bcryptjs": "^3.0.2",
+    "blog-test": "file:..",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
